@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+TestSet_Deployment/*
+TestSet_EAGLES.goldS.OFFICIAL
