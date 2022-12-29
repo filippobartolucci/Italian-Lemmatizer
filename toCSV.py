@@ -17,7 +17,7 @@ with open(file, 'r') as f:
         for l in lines:
             # write the list to a csv file
             with open(output, 'a') as o:
-                writer.writerow(l.split())
+                writer.writerow(l.lower().split())
 
         
     
