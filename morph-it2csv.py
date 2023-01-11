@@ -1,0 +1,43 @@
+import csv
+
+file = "./altri_dataset/morph-it_048_utf8.txt"
+output = "out.csv"
+
+
+# read the file
+with open(file, 'r') as f:
+    lines = f.readlines()
+
+
+    # create a set
+    tags = set()
+
+    # clear output file
+    with open(output, 'w') as o:
+        # write the header
+        writer = csv.writer(o, delimiter='\t')
+        writer.writerow(["word", "tag", "lem"])
+
+        for l in lines:
+            # write the list to a csv file
+            with open(output, 'a') as o:
+                w, l, t = l.lower().split()
+                # writer.writerow(l.lower().split())
+
+                t = t.split("|")[0]
+                t = t.split("=")[0]
+                t = t.split(":")[0]
+                t = t.split(".")[0]
+                t = t.split("-")[0]
+                t = t.split("_")[0]
+
+                
+                # add the tag to the set
+                tags.add((t))
+
+    # tags size
+    print(len(tags))
+
+    # print the set
+    for t in tags:
+        print(t)
