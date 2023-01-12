@@ -22,22 +22,4 @@ with open(file, 'r') as f:
             # write the list to a csv file
             with open(output, 'a') as o:
                 w, l, t = l.lower().split()
-                # writer.writerow(l.lower().split())
-
-                t = t.split("|")[0]
-                t = t.split("=")[0]
-                t = t.split(":")[0]
-                t = t.split(".")[0]
-                t = t.split("-")[0]
-                t = t.split("_")[0]
-
-                
-                # add the tag to the set
-                tags.add((t))
-
-    # tags size
-    print(len(tags))
-
-    # print the set
-    for t in tags:
-        print(t)
+                writer.writerow([w, t, l])
