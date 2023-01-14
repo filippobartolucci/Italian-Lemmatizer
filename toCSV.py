@@ -1,14 +1,12 @@
 import csv
 
-file = "./TestSet_EAGLES.goldS.OFFICIAL"
+file = "./TestSet_Deployment/DevSet_EAGLES.goldS"
 
 # Word Tag Lemma
 output1 = "out.csv"
 
 # Sentences
 output2 = "out2.csv"
-
-
 
 # read the file
 with open(file, 'r') as f:
