@@ -3,11 +3,9 @@ import csv
 file = "./altri_dataset/morph-it_048_utf8.txt"
 output = "out.csv"
 
-
 # read the file
 with open(file, 'r') as f:
     lines = f.readlines()
-
 
     # create a set
     tags = set()
