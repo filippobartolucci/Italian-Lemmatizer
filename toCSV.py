@@ -17,13 +17,13 @@ for i in range(len(files)):
             sentence = []
 
             for l in lines:
-                # write the list to a csv file
                 with open(outputs[i], 'a') as o:
                     w, l, t = l.lower().split()
                     writer.writerow([w, l, t])
 
                     if w == ".":
-                        # remove substring from namne
+                        sentence.append(w)
+                        # remove substring from name
                         fname = "sentences_" + outputs[i].replace(".csv", ".txt")
                         with open((fname), 'a') as o2:
                             # append the sentence to a file
