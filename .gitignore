@@ -132,3 +132,5 @@ TestSet_Deployment/*
 TestSet_EAGLES.goldS.OFFICIAL
 .vscode
 .DS_Store
+cc.it.300.bin
+cc.it.300.vec
