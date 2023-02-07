@@ -1,7 +1,21 @@
 import csv
 
-files =["./TestSet_Deployment/DevSet_EAGLES.goldS", "./TestSet_EAGLES.goldS.OFFICIAL"]
+files =["./Evalita2011/TestSet_Deployment/DevSet_EAGLES.goldS", "./Evalita2011/TestSet_EAGLES.goldS.OFFICIAL"]
 outputs = ["dev.csv", "test.csv"]
+simplified_tags = True
+
+
+def simplify_tag(tag):
+    if tag.startswith("adj"):
+        return "adj"
+    elif tag.startswith("adv"):
+        return "adv"
+    elif tag.startswith("nn"):
+        return "noun"
+    elif tag.startswith("v_"):
+        return "verb"
+
+    return tag.split("_")[0]
 
 for i in range(len(files)):
     # read the file
@@ -14,27 +28,17 @@ for i in range(len(files)):
             writer = csv.writer(o, delimiter='\t')
             writer.writerow(["word", "tag", "lem"])
 
-            sentence = []
 
             for l in lines:
                 with open(outputs[i], 'a') as o:
-                    w, l, t = l.lower().split()
-                    writer.writerow([w, l, t])
+                    w, t, lem = l.lower().split()
 
-                    if w == ".":
-                        sentence.append(w)
-                        # remove substring from name
-                        fname = "sentences_" + outputs[i].replace(".csv", ".txt")
-                        with open((fname), 'a') as o2:
-                            # append the sentence to a file
-                            o2.write(" ".join(sentence))
-                            o2.write("\n")
-                            sentence = []
+                    if simplified_tags:
+                        t = simplify_tag(t)
 
-                    else:
-                        sentence.append(w)
+                    writer.writerow([w, t, lem])
+
 
 
 
         
-    

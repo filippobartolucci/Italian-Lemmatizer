@@ -1,1 +1,1 @@
-# progetto_NLP
+# Italian Lemmatizer based on Neural Networks

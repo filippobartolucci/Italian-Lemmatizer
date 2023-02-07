@@ -134,3 +134,5 @@ TestSet_EAGLES.goldS.OFFICIAL
 .DS_Store
 cc.it.300.bin
 cc.it.300.vec
+Evalita2011/*
+model_checkpoint/
