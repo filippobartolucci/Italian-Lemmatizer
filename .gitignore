@@ -136,3 +136,7 @@ cc.it.300.bin
 cc.it.300.vec
 Evalita2011/*
 model_checkpoint/
+it_partut-ud-train.conllu
+it_partut-ud-dev.conllu
+it_partut-ud-test.conllu
+/it_partut-ud
