@@ -8,6 +8,7 @@ provided dataset.
 
 # Usage
 To run the project, you need run toCSV.py, which will generate the CSV files
+(using the Evalita2011 dev_set and test_set)
 needed for the training and testing of the neural network. Then, you can run
 notebook.ipynb, which will train the network and test it on the test set.
 
