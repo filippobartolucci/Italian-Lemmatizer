@@ -140,4 +140,4 @@ it_partut-ud-train.conllu
 it_partut-ud-dev.conllu
 it_partut-ud-test.conllu
 /it_partut-ud
-model.h5
+*.h5
