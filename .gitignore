@@ -142,3 +142,4 @@ it_partut-ud-test.conllu
 /it_partut-ud
 *.h5
 best/*
+*.csv
