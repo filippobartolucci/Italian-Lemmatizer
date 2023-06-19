@@ -143,3 +143,4 @@ it_partut-ud-test.conllu
 *.h5
 best/*
 *.csv
+*.json*
