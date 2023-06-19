@@ -1,7 +1,6 @@
 # Italian Lemmatizer based on Neural Networks
 
-The following project was completed as part of the exam for the Natural Lan-
-guage Processing course at the University of Bologna. The aim of the project
+The following project was completed as part of the exam for the Natural Language Processing course at the University of Bologna. The aim of the project
 was to tackle the challenge of lemmatisation for the Italian language. We followed
 the guidelines of the EVALITA 2011 task and conducted experiments using the
 provided dataset. 
